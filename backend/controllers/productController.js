@@ -13,7 +13,13 @@ exports.getAllProducts = async (req, res) => {
 
 exports.getProductBySlug = async (req, res) => {
     try {
-        const slug = req.params.slug.toLowerCase().replace(/\s+/g, '-');
+        // Handle encoded characters and normalize spaces/case
+        const slug = decodeURIComponent(req.params.slug)
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, '-');
+
+        console.log(`Searching for product with slug: ${slug}`);
         const product = await Product.findOne({ slug });
         if (!product) return res.status(404).json({ message: 'Product not found' });
 
