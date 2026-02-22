@@ -13,7 +13,8 @@ exports.getAllProducts = async (req, res) => {
 
 exports.getProductBySlug = async (req, res) => {
     try {
-        const product = await Product.findOne({ slug: req.params.slug });
+        const slug = req.params.slug.toLowerCase().replace(/\s+/g, '-');
+        const product = await Product.findOne({ slug });
         if (!product) return res.status(404).json({ message: 'Product not found' });
 
         const variants = await Variant.find({ productId: product._id });
