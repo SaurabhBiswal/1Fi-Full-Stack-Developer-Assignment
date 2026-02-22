@@ -2,6 +2,10 @@
 
 A premium full-stack web application that displays products with dynamic EMI plans backed by mutual funds. Built with the MERN stack and a focus on visual excellence.
 
+## 🚀 Live Demo
+- **Frontend (UI)**: [https://1-fi-full-stack-developer-assignmen-nine.vercel.app](https://1-fi-full-stack-developer-assignmen-nine.vercel.app)
+- **Backend (API)**: [https://onefi-full-stack-developer-assignment-cff4.onrender.com](https://onefi-full-stack-developer-assignment-cff4.onrender.com)
+
 ## 🚀 Features
 - **Dynamic Product Page**: Fetches live data from a Node.js/Express backend.
 - **Variant Switching**: Seamlessly switch between storage and color variants with instant price updates.
